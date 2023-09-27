@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+      </style>
+</head>
+<body>
+    <div class="topBar">
+        <img id="logo" src="https://www.freeiconspng.com/thumbs/weather-icon-png/weather-icon-png-16.png">
+        <input type="search" id="search" name="search" placeholder="Search City">
+        <label class="toggle">
+            <input type="checkbox">
+            <span class="slider"></span>
+            <span class="labels" data-on="°C" data-off="°F"></span>
+          </label>
+    </div>
+    <div class="mainBody">
+        <p id="default">Check the weather in any City!</p>
+        <div class="container">
+            <p class="country"></p>
+            <p class="city"></p>
+            <div class="tempContainer">
+            <p class="temp"></p>
+            <p class="weatherDesc"></p>
+            <img class="weatherIcon" src="https://cdn-icons-png.flaticon.com/512/0/74.png">
+            </div>
+            <div class="smallContainer">
+            <p class="time"></p>
+            <p class="wind"></p>
+            <p class="humid"></p>
+            <p class="vis"></p>
+            <p class="feelsLike">
+        </div>
+    </div>
+</body>
+<script src="bundle.js"></script>
+</html>

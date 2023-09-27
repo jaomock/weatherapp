@@ -1,0 +1,342 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(to right,rgba(255,0,0,0), rgb(89, 191, 209));
+}
+
+
+.topBar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(198, 198, 199,0.2);
+    border-bottom: 1px solid black;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+}
+
+#fillTxt{
+    margin-right: 50px;
+}
+
+#search{
+    width: 300px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: ridge;
+    width: 200px;
+    height: 300px;
+}
+
+.mainBody{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr 500px;
+}
+
+.container{
+    background-color: rgb(164, 164, 165,0.5);
+    border-radius: 15px;
+    border-style: outset;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 275px 1fr 275px;
+    grid-template-rows: 70px 70px 1fr 1fr;
+    opacity: 0;
+}
+
+.country{
+    font-size: 3.5em;
+    grid-column: 1/-1;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.city{
+    font-size: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.smallContainer{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+}
+
+.tempContainer{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 75px 1fr;
+    margin-left: 50px;
+}
+
+.temp{
+    display: flex;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    opacity: 1;
+}
+
+.weatherIcon{
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    margin-left: 25%;
+    opacity: 0;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+
+.weatherDesc{
+    display: flex;
+    align-self: center;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    font-style: italic;
+}
+
+.wind,.humid,.vis,.feelsLike{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+}
+
+.wind{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-right: 10px;
+}
+
+.feelsLike{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-right: 10px;
+    margin-bottom: 100px;
+}
+
+.humid{
+    grid-column-start: 0;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 10px;
+}
+
+.vis{
+    grid-column-start: 0;
+    grid-column-end:2 ;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+#default{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    font-size: 3em;
+    font-family: 'Mooli', sans-serif;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+/* .switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 50px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sliderRound{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.sliderRound:before{
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;;
+    transition: .4s;
+    border-radius: 50%;
+    content: '';
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+input:checked + .sliderRound{
+    background-color: #2196f3;
+}
+
+input:focus + .sliderRound{
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .sliderRound:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: 26px;
+} */
+
+.toggle {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+/* hiding checkbox */
+.toggle input {
+    display: none;
+}
+
+.toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+}
+.toggle .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Adding slider effect */
+.toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+.toggle input:checked + .slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+.toggle .labels {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle input:checked~.labels::after {
+    opacity: 0;
+}
+
+.toggle input:checked~.labels::before {
+    opacity: 1;
+}
